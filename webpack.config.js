@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -11,6 +11,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+       { from: 'src/assets/*', to({ context, absoluteFilename }) {
+        return "assets/[name][ext]";
+      }, }
+      ]
+    })
   ],
   output: {
     filename: '[name].[contenthash].js',
@@ -23,6 +30,15 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      // {
+      //   test: /\.(png|jpg|svg|gif)$/,
+      //   use: ['file-loader']
+      // },
+      {
+        test: /\.(ttf|woff|woff2|eot)$/,
+        use: ['file-loader']
+      },
     ],
   },
 };
+
