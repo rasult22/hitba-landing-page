@@ -10,15 +10,20 @@
   display: flex;
   position: absolute;
   justify-content: space-between;
-  font-family: Open Sans;
   color: white;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 .page-header__left {
 
 }
 .page-header__left img.logo {
-  width: 184.16px;
-  height: 63px;
+  width: 140px;
+  height: 50px;
 }
 .page-header__right {
   display: flex;
