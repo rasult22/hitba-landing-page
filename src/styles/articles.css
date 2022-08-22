@@ -1,0 +1,116 @@
+.articles {
+  padding-top: 120px;
+}
+.articles__title{
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.articles__wrapper{
+  padding-top: 64px;
+  display: flex;
+  padding-bottom: 16px;
+}
+
+.article{
+  text-decoration: none;
+  color: #101828;
+  padding: 24px;
+  max-width: 373px;
+  min-width: 353px;
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 16px;
+  cursor: pointer;
+}
+.article:first-child {
+  margin-left: 0;
+}
+.article:last-child {
+  margin-right: 0;
+}
+.article__img{
+  width: 100%;
+  min-height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: background-size .3s ease;
+}
+.article:hover .article__img {
+  background-size: 120%;
+}
+.article__mini-title {
+  margin-top: 24px;
+  font-family: Inter;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6941C6;
+}
+.article__title {
+  width: 100%;
+  margin-top: 12px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.article__text {
+  margin-top: 12px;
+  font-family: Inter;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #667085;
+}
+.article__author{
+  width: 100%;
+  margin-top: 32px;
+}
+
+.author{ display: flex; }
+.author__avatar{
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.author__avatar img {
+  width: 100%;
+}
+.author__details{}
+.author__name {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.author__date {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #667085;
+}
