@@ -1,0 +1,45 @@
+.download-app {
+  padding-top: 120px;
+  display: flex;
+}
+.download-app__left{
+  width: 50%;
+}
+.download-app__right{
+  width: 50%;
+  text-align: center;
+}
+.download-app__title {
+  padding-top: 50px;
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+.download-app__text {
+  margin-top: 24px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #475569;
+}
+.download-app__icons {
+  padding-top: 64px;
+}
+.download-app__icons img {
+  width: 193px;
+  cursor: pointer;
+}
+.download-app__icons img:first-child {
+  width: 178px;
+  margin-right: 32px;
+}
+.download-app__right img {
+  width: 400px;
+  height: 496px;
+}
