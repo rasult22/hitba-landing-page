@@ -40,6 +40,10 @@
   display: block;
   cursor: pointer;
 }
+.menu__item a, .menu__item a:visited {
+  color:white;
+  text-decoration: none;
+}
 .menu__item:hover {
   opacity: 0.7;
   transition: opacity 0.1s ease;
