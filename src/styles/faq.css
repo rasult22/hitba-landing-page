@@ -29,6 +29,9 @@
   -webkit-tap-highlight-color: transparent;
   border-bottom: 1px solid #EAECF0;
 }
+.faq-question:last-child {
+  border-bottom: none;
+}
 
 .faq-question input[type=checkbox] {
   position: absolute;
