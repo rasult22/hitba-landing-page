@@ -29,6 +29,7 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
+    "imask": "^6.4.2",
     "normalize.css": "^8.0.1"
   }
 }
