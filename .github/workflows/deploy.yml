@@ -27,5 +27,5 @@ jobs:
 
       - run: docker push ghcr.io/$OWNER/$IMAGE:latest
 
-#      - name: Deploy
-#        run: curl -k -X POST https://url
+      - name: Deploy
+        run: curl -k -X POST https://pr.hitba.io/api/webhooks/9bae7cb8-732e-4ead-a28e-2c1c909c5251
