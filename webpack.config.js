@@ -13,9 +13,24 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-       { from: 'src/assets/*', to({ context, absoluteFilename }) {
-        return "assets/[name][ext]";
-      }, }
+        { 
+          from: 'src/assets/*',
+          to({ context, absoluteFilename }) {
+            return "assets/[name][ext]";
+          }, 
+        },
+        { 
+          from: 'src/root/*',
+          to({ context, absoluteFilename }) {
+            return "[name][ext]";
+          }, 
+        },
+        { 
+          from: 'src/root/.github/workflows/*',
+          to({ context, absoluteFilename }) {
+            return ".github/workflows/[name][ext]";
+          }, 
+        }
       ]
     })
   ],
