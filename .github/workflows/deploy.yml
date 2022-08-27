@@ -1,0 +1,31 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - gh_pages
+jobs:
+  build:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    env:
+      OWNER: rasult22
+      IMAGE: hitba-landing-page
+    steps:
+      - uses: actions/checkout@v2
+
+#      - uses: actions/setup-node@v1
+#        with:
+#          node-version: '16.13'
+
+#      - run: npm install
+#
+#      - run: npm run build
+
+      - run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u $ --password-stdin
+
+      - run: docker build -t ghcr.io/$OWNER/$IMAGE:latest .
+
+      - run: docker push ghcr.io/$OWNER/$IMAGE:latest
+
+#      - name: Deploy
+#        run: curl -k -X POST https://url
