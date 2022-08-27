@@ -35,3 +35,13 @@ img {
   -o-user-drag: none;
   user-drag: none;
 }
+@import '~normalize.css';
+@import './articles.css';
+@import './download-app.css';
+@import './faq.css';
+@import './first-section.css';
+@import './footer.css';
+@import './get-number.css';
+@import './header.css';
+@import './second-section.css';
+@import './third-section.css';

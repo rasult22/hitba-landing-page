@@ -1,15 +1,4 @@
-import 'normalize.css'
-import './styles/main.css'
-import './styles/header.css'
-import './styles/footer.css'
-import './styles/first-section.css'
-import './styles/second-section.css'
-import './styles/third-section.css'
-import './styles/faq.css'
-import './styles/articles.css'
-import './styles/get-number.css'
-import './styles/download-app.css'
-
+require('./styles/main.css')
 import landingOrder from './js/form'
 import { applyPhoneMaskToInputElement } from './js/input-masking'
 
