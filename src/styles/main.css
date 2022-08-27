@@ -9,7 +9,9 @@
 body {
   color: #101828;
 }
-
+.d-none {
+  display: none;
+}
 .mt-1 {
   margin-top: 4px;
 }
@@ -45,3 +47,4 @@ img {
 @import './header.css';
 @import './second-section.css';
 @import './third-section.css';
+@import './success-alert.css';

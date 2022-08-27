@@ -13,6 +13,8 @@ window.addEventListener('load', (event) => {
 
   form1.addEventListener('submit', phoneSubmitHandler)
   form2.addEventListener('submit', phoneSubmitHandler)
+
+  alertSettings()
 });
 
 function phoneSubmitHandler (e) {
@@ -21,10 +23,22 @@ function phoneSubmitHandler (e) {
   
   if(phoneNumber) {
     landingOrder(phoneNumber).then(function() {
-      alert('succeed')
+      showAlert()
     }).catch(e => {
-      alert('Sorry, something went wrong!')
+      console.error(e)
     })
   }
 }
 
+function showAlert () {
+  document.querySelector('.success-alert').classList.toggle('d-none')
+}
+function alertSettings() {
+  const alertEl = document.querySelector('.success-alert')
+  document.querySelector('.success-alert__overlay').addEventListener('click', function () {
+    showAlert()
+  })
+  document.querySelector('.success-alert__btn').addEventListener('click', function () {
+    showAlert()
+  })
+}
