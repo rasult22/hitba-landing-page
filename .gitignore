@@ -109,3 +109,6 @@ dist
 *.ntvs*
 *.njsproj
 *.sln
+
+
+.DS_Store
