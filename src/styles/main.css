@@ -6,6 +6,10 @@
   max-width: 1184px;
   margin: 0 auto;
 }
+.link {
+  text-decoration: none;
+  color: inherit;
+}
 body {
   color: #101828;
 }
@@ -48,3 +52,4 @@ img {
 @import './second-section.css';
 @import './third-section.css';
 @import './success-alert.css';
+@import './our-team.css';

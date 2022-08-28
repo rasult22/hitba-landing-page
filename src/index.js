@@ -1,5 +1,6 @@
 require('./styles/main.css')
 import landingOrder from './js/form'
+import Swiper, {Navigation} from 'swiper';
 import { applyPhoneMaskToInputElement } from './js/input-masking'
 
 window.addEventListener('load', (event) => {
@@ -15,6 +16,7 @@ window.addEventListener('load', (event) => {
   form2.addEventListener('submit', phoneSubmitHandler)
 
   alertSettings()
+  window.swiper = initSwiper()
 });
 
 function phoneSubmitHandler (e) {
@@ -41,4 +43,18 @@ function alertSettings() {
   document.querySelector('.success-alert__btn').addEventListener('click', function () {
     showAlert()
   })
+}
+
+function initSwiper () {
+  Swiper.use([Navigation])
+  var swiper = new Swiper('.team-swiper', {
+    slidesPerView: 2,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+  // swiper.slideTo()
+  return swiper
 }
