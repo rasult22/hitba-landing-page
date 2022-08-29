@@ -1081,6 +1081,59 @@ template {
   text-align: center;
 }
 /*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/our-team.css ***!
+  \***************************************************************************/
+.our-team {
+  padding-top: 120px;
+}
+.our-team__title {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.team-swiper__controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.team-swiper__controls div {
+  margin: 0px 5px;
+}
+
+.team-member {
+  padding: 0 10px;
+}
+.team-member__img {}
+.team-member__wrapper {
+  display: flex;
+  padding-top: 51px;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.team-member__title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 16px;
+}
+.team-member__role {
+  margin-top: 4px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #667085;
+}
+/*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (1) ***!
   \***************************************************************************/
 .global-wrapper {
@@ -1089,6 +1142,10 @@ template {
 .wrapper {
   max-width: 1184px;
   margin: 0 auto;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
 }
 body {
   color: #101828;
