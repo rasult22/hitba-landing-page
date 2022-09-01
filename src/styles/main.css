@@ -2,6 +2,9 @@
 .global-wrapper {
   position: relative;
 }
+.mobile-menu {
+  display: none;
+}
 .wrapper {
   max-width: 1184px;
   margin: 0 auto;

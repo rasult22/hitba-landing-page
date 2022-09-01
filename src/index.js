@@ -1,6 +1,7 @@
 require('./styles/main.css')
 import landingOrder from './js/form'
 import Swiper, {Navigation} from 'swiper';
+import 'swiper/css'
 import { applyPhoneMaskToInputElement } from './js/input-masking'
 
 window.addEventListener('load', (event) => {
@@ -49,18 +50,21 @@ function alertSettings() {
 }
 
 function initSwiper () {
-  const windowWidth = window.innerWidth
-  return
+  var slidesPerView = 5
+  var spaceBetween = 10
+  if (window.innerWidth < 700) {
+    slidesPerView = 1.4
+    spaceBetween = 30
+  }
   Swiper.use([Navigation])
   var swiper = new Swiper('.team-swiper', {
-    slidesPerView: 2,
-    grabCursor: true,
+    slidesPerView: slidesPerView,
+    spaceBetween,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   })
-  // swiper.slideTo()
   return swiper
 }
 

@@ -101,13 +101,42 @@
     padding: 14px 34px;
   }
 
+  /* 
+    Our Team
+  */
+
+  .our-team {
+    overflow: hidden;
+    padding-top: 30px;
+  }
+  .our-team__title {
+    font-size: 27px;
+  }
+  .team-member__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .team-member__role {
+    text-align: center;
+    font-size: 14px;
+  }
+  .team-member__img img{
+    max-width: 250px;
+  }
+  .team-member {
+    /* min-width: 70%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 
   /* 
     Articles
   */
   .articles {
-    padding-top: 30px;
+    padding: 60px 16px;
   }
   .articles__title {
     font-size: 27px;
