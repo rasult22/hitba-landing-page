@@ -30,6 +30,7 @@
   .menu__item {
     margin-top: 17px;
     font-size: 20px;
+    margin-right: 0;
   }
   .page-header {
     /* display: none; */

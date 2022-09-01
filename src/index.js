@@ -19,6 +19,7 @@ window.addEventListener('load', (event) => {
   alertSettings()
   window.swiper = initSwiper()
   mobileMenu()
+  smoothScroll()
 });
 
 function phoneSubmitHandler (e) {
@@ -91,7 +92,26 @@ function mobileMenu () {
   })
   close.addEventListener('click', closeFn)
 
-  function closeFn () {
+  function closeFn (e) {
     menu.classList.remove('d-block')
   }
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+ 
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
+
+function smoothScroll () {
+  var links = document.querySelectorAll('.menu__item a')
+
+  links.forEach(function (x) {
+    x.addEventListener('click', clickHandler)
+  })
 }

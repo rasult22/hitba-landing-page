@@ -42,6 +42,7 @@
   list-style-type: none;
   display: block;
   cursor: pointer;
+  margin-right: 40px;
 }
 .menu__item a, .menu__item a:visited {
   color:white;
