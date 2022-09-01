@@ -5,6 +5,13 @@ import 'swiper/css'
 import { applyPhoneMaskToInputElement } from './js/input-masking'
 
 window.addEventListener('load', (event) => {
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    window.document.addEventListener('touchmove', e => {
+      if(e.scale !== 1) {
+        e.preventDefault();
+      }
+    }, {passive: false});
+  }
   var input1 = document.querySelector('#phone-input-1')
   var input2 = document.querySelector('#phone-input-2')
   applyPhoneMaskToInputElement(input1)
