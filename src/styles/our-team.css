@@ -9,7 +9,10 @@
   letter-spacing: -0.02em;
   text-align: center;
 }
-
+.team-swiper {
+  max-width: 1900px;
+  margin: 0 auto;
+}
 .team-swiper__controls {
   display: flex;
   justify-content: center;

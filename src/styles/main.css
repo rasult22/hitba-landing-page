@@ -2,6 +2,9 @@
 .global-wrapper {
   position: relative;
 }
+.mobile-menu {
+  display: none;
+}
 .wrapper {
   max-width: 1184px;
   margin: 0 auto;
@@ -15,6 +18,11 @@ body {
 }
 .d-none {
   display: none;
+}
+.d-block {
+  display: block;
+  transition: opacity .3s ease;
+  opacity: 1;
 }
 .mt-1 {
   margin-top: 4px;
@@ -33,6 +41,9 @@ body {
 }
 .text-intent {
   text-indent: 25px;
+}
+* {
+  box-sizing: border-box;
 }
 img {
   webkit-user-drag: none;
@@ -53,3 +64,5 @@ img {
 @import './third-section.css';
 @import './success-alert.css';
 @import './our-team.css';
+
+@import './media-queries.css'

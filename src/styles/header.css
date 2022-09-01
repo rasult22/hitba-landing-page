@@ -18,6 +18,9 @@
   letter-spacing: 0em;
   text-align: center;
 }
+.page-header__burger {
+  display: none;
+}
 .page-header__left {
 
 }
@@ -39,6 +42,7 @@
   list-style-type: none;
   display: block;
   cursor: pointer;
+  margin-right: 40px;
 }
 .menu__item a, .menu__item a:visited {
   color:white;
