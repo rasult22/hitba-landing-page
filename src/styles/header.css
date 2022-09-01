@@ -18,6 +18,9 @@
   letter-spacing: 0em;
   text-align: center;
 }
+.page-header__burger {
+  display: none;
+}
 .page-header__left {
 
 }

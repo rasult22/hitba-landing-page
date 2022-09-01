@@ -17,6 +17,7 @@ window.addEventListener('load', (event) => {
 
   alertSettings()
   window.swiper = initSwiper()
+  mobileMenu()
 });
 
 function phoneSubmitHandler (e) {
@@ -49,10 +50,6 @@ function alertSettings() {
 
 function initSwiper () {
   const windowWidth = window.innerWidth
-  if(windowWidth < 1230) {
-    document.querySelector('.team-swiper').classList.add('d-none')
-    return
-  } 
   return
   Swiper.use([Navigation])
   var swiper = new Swiper('.team-swiper', {
@@ -65,4 +62,32 @@ function initSwiper () {
   })
   // swiper.slideTo()
   return swiper
+}
+
+
+function mobileMenu () {
+  var menu = document.querySelector('.mobile-menu')
+  var burger = document.querySelector('.page-header__burger')
+  var close = document.querySelector('.mobile-menu__header .close')
+  var link = document.querySelectorAll('.mobile-menu .menu__item')
+  burger.addEventListener('click', function () {
+    menu.classList.add('d-block')
+  })
+
+  window.addEventListener('scroll', async function (e) {
+    if(window.scrollY > 612) {
+      document.querySelector('.page-header').classList.add('page-header--background')
+    } else {
+      document.querySelector('.page-header').classList.remove('page-header--background')
+    }
+  })
+  
+  link.forEach(function (x) {
+    x.addEventListener('click', closeFn)
+  })
+  close.addEventListener('click', closeFn)
+
+  function closeFn () {
+    menu.classList.remove('d-block')
+  }
 }
