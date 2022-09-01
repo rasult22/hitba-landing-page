@@ -1,13 +1,24 @@
 export default async function landingOrder (phone) {
-  const api = 'https://api.hitba.io/main/landing_order'
-  const reqObj = {
+  if (!phone) return
+
+
+  var phoneArr = String(phone).split('')
+
+  var removed = phoneArr.filter(x => {
+    const yes  = /[\d]/g.test(x)
+    return yes
+  })
+  var formattedPhone = removed.join('')
+
+  var api = 'https://api.hitba.io/main/landing_order'
+  var reqObj = {
     email: "none",
     name: "none",
-    phone,
+    phone: formattedPhone,
     solved: true
   }
   
-  const rawResponse = await fetch(api, {
+  var rawResponse = await fetch(api, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -15,7 +26,7 @@ export default async function landingOrder (phone) {
     },
     body: JSON.stringify(reqObj)
   });
-  const content = await rawResponse.json();
+  var content = await rawResponse.json();
   console.log(content)
   return content
 }
