@@ -96,6 +96,9 @@
     justify-content: center;
     margin-top: 24px;
   }
+  .features-block-item:first-child {
+    margin-top: 10px;
+  }
   .features-block-item {
     margin-top: 24px;
     padding: 0;
@@ -109,9 +112,12 @@
   }
   .features-block-item__title {
     font-size: 14px;
+    margin-top: 16px;
   }
   .features-block-item__desc {
     font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
   }
 
   /* 
