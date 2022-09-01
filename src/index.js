@@ -48,6 +48,12 @@ function alertSettings() {
 }
 
 function initSwiper () {
+  const windowWidth = window.innerWidth
+  if(windowWidth < 1230) {
+    document.querySelector('.team-swiper').classList.add('d-none')
+    return
+  } 
+  return
   Swiper.use([Navigation])
   var swiper = new Swiper('.team-swiper', {
     slidesPerView: 2,

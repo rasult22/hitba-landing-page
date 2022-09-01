@@ -34,6 +34,9 @@ body {
 .text-intent {
   text-indent: 25px;
 }
+* {
+  box-sizing: border-box;
+}
 img {
   webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -53,3 +56,5 @@ img {
 @import './third-section.css';
 @import './success-alert.css';
 @import './our-team.css';
+
+@import './media-queries.css'

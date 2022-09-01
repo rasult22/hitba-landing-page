@@ -1,0 +1,258 @@
+@media (max-width: 600px) {
+  .page-header {
+    display: none;
+  }
+  .mobile-px-16 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .success-alert {}
+  .success-alert__content {
+  }
+  .success-alert__title {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 12px;
+  }
+  .success-alert__btn {
+    margin-top: 16px;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* 
+    First Block
+  */
+  .first-section {
+    padding: 0 16px;
+  }
+  .first-section__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .first-section__title-text {
+    font-size: 18px;
+  }
+  .form {
+    flex-wrap: wrap;
+  }
+  .form-input {
+    font-size: 14px;
+    padding: 18px 22px;
+    width: 60%;
+  }
+  .form-btn {
+    margin-left: 0;
+    margin-top: 14px;
+    font-size: 14px;
+    padding: 14px 34px;
+  }
+
+
+
+  /* 
+    Articles
+  */
+  .articles {
+    padding-top: 50px;
+  }
+  .articles__title {
+    font-size: 27px;
+  }
+  .articles__wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .article:first-child {
+    margin: 0 16px;
+  }
+  .article {
+    margin-top: 16px;
+  }
+  .article__title {
+    font-size: 18px;
+  }
+  .article__text {
+    font-size: 14px;
+  }
+
+
+  /* 
+    Features
+  */
+
+  .second-section {
+    padding-top: 60px;
+  }
+  .second-section__title {
+    font-size: 27px;
+  }
+  .features-block {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .features-block-item {
+    margin-top: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-left: none;
+    flex-direction: column;
+  }
+  .features-block-item__icon img {
+    width: 60px;
+  }
+  .features-block-item__title {
+    font-size: 14px;
+  }
+  .features-block-item__desc {
+    font-size: 12px;
+  }
+
+  /* 
+    Advantages
+  */
+  .third-section{
+    padding: 60px 16px 0;
+  }
+  .third-section__mini-title{
+    font-size: 14px;
+  }
+  .third-section__title{
+    font-size: 27px;
+  }
+  .advantages-block {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  .advantages-block__left {
+    width: 100%;
+    padding-top: 18px;
+  }
+  .advantages-block__right {
+    margin-top: 32px;
+    width: 100%;
+  }
+  .advantages-item {
+    
+  }
+  .advantages-item:nth-child(3) {
+    margin-top: 32px;
+  }
+  .advantages-item__title {
+    font-size: 18px;
+  }
+  .advantages-item__desc {
+    font-size: 12px;
+  }
+
+
+  /* 
+  get number
+  */
+  .get-number {
+    flex-wrap: wrap;
+    padding: 16px;
+    width: auto;
+    margin-top: 50px;
+  }
+  .get-number__title {
+    font-size: 16px;
+  }
+  .get-number__form {
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+  }
+  .get-number__form input{ 
+    font-size: 14px;
+    width: 100%;
+  }
+  .get-number__form button{ 
+    font-size: 14px;
+  }
+  /* 
+    Download App
+  */
+  .download-app {
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+  .download-app__title {
+    font-size: 40px;
+    line-height: 52px;
+    padding: 0 16px;
+  }
+  .download-app__text {
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .download-app__left {
+    width: 100%;
+  }
+  .download-app__right {
+    width: 100%;
+  }
+  .download-app__right img{
+    width: 80%;
+    height: auto;
+  }
+  .download-app__icons {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .download-app__icons img, .download-app__icons img:first-child  {
+    width: 40%;
+    height: auto;
+    margin: 0;
+  }
+
+  /* 
+    FAQ
+  */
+  .faq {
+    padding-top: 60px;
+  }
+  .faq__title {
+    font-size: 27px;
+    line-height: 34px;
+    padding: 0 16px;
+  }
+  .faq-block {
+    margin-top: 20px;
+  }
+  .faq-question{}
+  .faq-question__text {
+    font-size: 14px;
+    max-width: 90%;
+    line-height: 20px;
+  }
+  .faq-question__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* 
+    Footer
+  */
+  .page-footer {
+    height: auto;
+    padding: 0 16px 20px;
+  }
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+  .footer-section:nth-child(2), .footer-section:nth-child(3), .footer-section:nth-child(4) {
+    margin-top: 20px;
+  }
+}
