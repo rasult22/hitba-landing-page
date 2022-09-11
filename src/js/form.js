@@ -27,6 +27,5 @@ export default async function landingOrder (phone) {
     body: JSON.stringify(reqObj)
   });
   var content = await rawResponse.json();
-  console.log(content)
   return content
 }

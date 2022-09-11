@@ -36,13 +36,15 @@
   padding: 0;
   list-style-type: none;
 }
-.footer-list__item {
+.footer-list__item, .footer-list__item a, .footer-list__item a:visited {
   font-family: Inter;
   font-size: 10px;
   font-weight: 600;
   line-height: 30px;
   letter-spacing: 0em;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .social-apps {

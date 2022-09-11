@@ -6,12 +6,22 @@ import { applyPhoneMaskToInputElement } from './js/input-masking'
 
 window.addEventListener('load', (event) => {
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    window.document.addEventListener('touchmove', e => {
+    window.document.addEventListener('touchmove', function(e) {
       if(e.scale !== 1) {
         e.preventDefault();
       }
     }, {passive: false});
   }
+ 
+  initForms()
+  alertSettings()
+  downloadAppHandler()
+  window.swiper = initSwiper()
+  mobileMenu()
+  smoothScroll()
+});
+
+function initForms () {
   var input1 = document.querySelector('#phone-input-1')
   var input2 = document.querySelector('#phone-input-2')
   applyPhoneMaskToInputElement(input1)
@@ -22,12 +32,25 @@ window.addEventListener('load', (event) => {
 
   form1.addEventListener('submit', phoneSubmitHandler)
   form2.addEventListener('submit', phoneSubmitHandler)
+}
 
-  alertSettings()
-  window.swiper = initSwiper()
-  mobileMenu()
-  smoothScroll()
-});
+function downloadAppHandler () {
+  var downloads = document.querySelectorAll('.download-app-icon')
+
+  downloads.forEach(el => {
+    el.addEventListener('click', function (e) {
+      toggleDownloadAlert()
+    })
+  })
+  document.querySelector('.success-alert__overlay--2')
+    .addEventListener('click', function () {
+      toggleDownloadAlert()
+    })
+  document.querySelector('.success-alert__btn--2')
+    .addEventListener('click', function () {
+      toggleDownloadAlert()
+    })
+}
 
 function phoneSubmitHandler (e) {
   e.preventDefault()
@@ -35,25 +58,28 @@ function phoneSubmitHandler (e) {
   
   if(phoneNumber) {
     landingOrder(phoneNumber).then(function() {
-      showAlert()
+      toggleAlert()
     }).catch(e => {
       console.error(e)
     })
   }
 }
 
-function showAlert () {
+function toggleDownloadAlert () {
+  document.querySelector('.inform-alert').classList.toggle('d-none')
+}
+function toggleAlert () {
   document.querySelector('.success-alert').classList.toggle('d-none')
 }
 function alertSettings() {
   var alertEl = document.querySelector('.success-alert')
-  document.querySelector('.success-alert__overlay')
+  document.querySelector('.success-alert__overlay--1')
     .addEventListener('click', function () {
-      showAlert()
+      toggleAlert()
     })
-  document.querySelector('.success-alert__btn')
+  document.querySelector('.success-alert__btn--1')
     .addEventListener('click', function () {
-      showAlert()
+      toggleAlert()
     })
 }
 
@@ -75,7 +101,6 @@ function initSwiper () {
   })
   return swiper
 }
-
 
 function mobileMenu () {
   var menu = document.querySelector('.mobile-menu')
@@ -117,8 +142,12 @@ function clickHandler(e) {
 
 function smoothScroll () {
   var links = document.querySelectorAll('.menu__item a')
+  var links2 = document.querySelectorAll('.footer-list__item a')
 
   links.forEach(function (x) {
+    x.addEventListener('click', clickHandler)
+  })
+  links2.forEach(function (x) {
     x.addEventListener('click', clickHandler)
   })
 }

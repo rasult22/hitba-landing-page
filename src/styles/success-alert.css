@@ -22,6 +22,10 @@
   backdrop-filter: blur(4px);
 }
 
+.success-alert__text {
+  font-family: Inter;
+  text-align: center;
+}
 .success-alert__title {
   font-family: Inter;
   font-size: 18px;

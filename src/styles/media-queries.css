@@ -61,6 +61,9 @@
   .success-alert__content {
     width: 65%;
   }
+  .success-alert__text {
+    font-size: 12px;
+  }
   .success-alert__title {
     font-size: 14px;
     line-height: 18px;
