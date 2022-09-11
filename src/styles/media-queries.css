@@ -41,7 +41,7 @@
     z-index: 8;
   }
   .page-header--background {
-    background-color: rgba(81,78,182,.88);
+    background-color: rgba(0, 0, 0, .88);
   }
   .page-header__burger {
     display: block;

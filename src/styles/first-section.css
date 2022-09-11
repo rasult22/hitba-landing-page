@@ -73,11 +73,12 @@
   padding: 24px 52px;
   margin-left: 24px;
   color: #ffff;
-  background-color: rgba(81, 78, 182, 1);
+  background-color: rgba(29, 172, 138, 1);
+  
   cursor: pointer;
 }
 .form-btn:hover {
-  background-color: rgba(81, 78, 182, .9);
+  background-color: rgba(29, 172, 138, .9);
   transition: background-color 0.1s ease;
 }
 /* 
