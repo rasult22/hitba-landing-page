@@ -418,7 +418,7 @@ template {
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
-  color: #6941C6;
+  color: #00836B;
 }
 .article__title {
   width: 100%;
@@ -519,8 +519,9 @@ template {
   margin-right: 32px;
 }
 .download-app__right img {
-  width: 400px;
-  height: 496px;
+  width: 306px;
+  height: 547px;
+  margin-bottom: -4px;
 }
 /*!**********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/faq.css ***!
@@ -709,11 +710,12 @@ template {
   padding: 24px 52px;
   margin-left: 24px;
   color: #ffff;
-  background-color: rgba(81, 78, 182, 1);
+  background-color: rgba(29, 172, 138, 1);
+  
   cursor: pointer;
 }
 .form-btn:hover {
-  background-color: rgba(81, 78, 182, .9);
+  background-color: rgba(29, 172, 138, .9);
   transition: background-color 0.1s ease;
 }
 /* 
@@ -726,7 +728,7 @@ template {
 .page-footer {
   height: 300px;
   width: 100%;
-  background: rgba(81, 78, 182, 1);
+  background: rgba(29, 172, 138, 1);
   color: white;
 }
 .footer-container {
@@ -761,13 +763,15 @@ template {
   padding: 0;
   list-style-type: none;
 }
-.footer-list__item {
+.footer-list__item, .footer-list__item a, .footer-list__item a:visited {
   font-family: Inter;
   font-size: 10px;
   font-weight: 600;
   line-height: 30px;
   letter-spacing: 0em;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .social-apps {
@@ -781,7 +785,7 @@ template {
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/get-number.css ***!
   \*****************************************************************************/
 .get-number {
-  background: rgba(81, 78, 182, 1);
+  background: rgba(29, 172, 138, 1);
   border-radius: 12px;
   width: 100%;
   padding: 36px;
@@ -800,10 +804,11 @@ template {
   text-align: left;
 }
 .get-number__form {
+  display: flex;
   padding: 6px 6px 6px 24px;
   border-radius: 8px;
   margin-left: 21px;
-  background: rgba(38, 36, 126, 1);
+  background: rgba(0, 131, 107, 1);
 }
 
 .get-number__form input {
@@ -831,7 +836,7 @@ template {
   border: none;
   text-align: center;
   border-radius: 8px;
-  color: rgba(81, 78, 182, 1);
+  color: rgba(29, 172, 138, 1);
   padding: 8px 15px;
   width: 162px;
   cursor: pointer;
@@ -972,7 +977,7 @@ template {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: #6941C6;
+  color: #00836B;
 }
 .third-section__title{
   margin-top: 12px;
@@ -1053,6 +1058,10 @@ template {
   backdrop-filter: blur(4px);
 }
 
+.success-alert__text {
+  font-family: Inter;
+  text-align: center;
+}
 .success-alert__title {
   font-family: Inter;
   font-size: 18px;
@@ -1065,8 +1074,8 @@ template {
   margin-top: 20px;
 }
 .success-alert__btn {
-  background: #514EB6;
-  border: 1px solid #514EB6;
+  background: #1DAC8A;
+  border: 1px solid #1DAC8A;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 8px;
   color: white;
@@ -1187,7 +1196,7 @@ template {
     z-index: 8;
   }
   .page-header--background {
-    background-color: rgba(81,78,182,.88);
+    background-color: rgba(0, 0, 0, .88);
   }
   .page-header__burger {
     display: block;
@@ -1206,6 +1215,9 @@ template {
   .success-alert {}
   .success-alert__content {
     width: 65%;
+  }
+  .success-alert__text {
+    font-size: 12px;
   }
   .success-alert__title {
     font-size: 14px;
