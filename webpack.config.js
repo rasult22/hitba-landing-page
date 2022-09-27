@@ -1,7 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -36,6 +39,19 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({filename: 'main.css'})
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new HtmlMinimizerPlugin({
+        minimizerOptions: {
+          minifyCSS: true,
+          minifyJS: true
+        }
+      }),
+      new CssMinimizerPlugin(),
+      new TerserPlugin()
+    ]
+  },
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
