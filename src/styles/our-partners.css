@@ -1,0 +1,26 @@
+.our-partners {
+    padding-top: 120px;
+  }
+.our-partners__title{
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+.partners__wrapper{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px
+}
+.partner__logo{
+    width: 100px;
+    max-width: 100%;
+}
+#divergent{
+    width: 60px;
+}
