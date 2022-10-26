@@ -15,12 +15,42 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'ru-RU/index.html',
+      template: './src/ru-RU/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en-EN/index.html',
+      template: './src/en-EN/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'kk-KZ/index.html',
+      template: './src/kk-KZ/index.html',
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { 
           from: 'src/assets/*',
           to({ context, absoluteFilename }) {
             return "assets/[name][ext]";
+          }, 
+        },
+        { 
+          from: 'src/ru-RU/*',
+          to({ context, absoluteFilename }) {
+            return "ru-RU/[name][ext]";
+          }, 
+        },
+        { 
+          from: 'src/en-EN/*',
+          to({ context, absoluteFilename }) {
+            return "ru-RU/[name][ext]";
+          }, 
+        },
+        { 
+          from: 'src/kk-KZ/*',
+          to({ context, absoluteFilename }) {
+            return "kk-KZ/[name][ext]";
           }, 
         },
         { 
