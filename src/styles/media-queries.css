@@ -351,4 +351,15 @@
   .footer-section:nth-child(2), .footer-section:nth-child(3), .footer-section:nth-child(4) {
     margin-top: 20px;
   }
+  .our-partners {
+    padding-top: 30px;
+  }
+  .our-partners__title{
+    font-size: 27px;
+    line-height: 34px;
+  }
+  .partners__wrapper {
+    gap: 30px;
+    padding: 0 16px;
+  }
 }
