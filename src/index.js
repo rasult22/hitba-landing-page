@@ -4,6 +4,10 @@ import Swiper, {Navigation} from 'swiper';
 import 'swiper/css'
 import { applyPhoneMaskToInputElement } from './js/input-masking'
 
+import localeKzData from "./locale/kz"
+import localeRuData from "./locale/ru"
+
+
 window.addEventListener('load', (event) => {
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
     window.document.addEventListener('touchmove', function(e) {
@@ -13,6 +17,7 @@ window.addEventListener('load', (event) => {
     }, {passive: false});
   }
  
+  initLocale()
   initForms()
   alertSettings()
   downloadAppHandler()
@@ -32,6 +37,10 @@ function initForms () {
 
   form1.addEventListener('submit', phoneSubmitHandler)
   form2.addEventListener('submit', phoneSubmitHandler)
+
+  const langSelectEl = document.querySelector("#lang-select");
+  langSelectEl.value = localStorage.getItem("lang") || "ru";
+  langSelectEl.addEventListener("change", setLocale)
 }
 
 function downloadAppHandler () {
@@ -149,5 +158,33 @@ function smoothScroll () {
   })
   links2.forEach(function (x) {
     x.addEventListener('click', clickHandler)
+  })
+}
+
+
+function setLocale(e){
+  localStorage.setItem("lang", e.target.value)
+
+  initLocale();
+}
+
+function initLocale(){
+  const elements = document.querySelectorAll("[data-locale-id]");
+  const currentLang = localStorage.getItem("lang") || "ru";
+
+  elements.forEach(el => {
+    if(!el?.dataset?.localeId) return;
+    const key = el.dataset.localeId;
+
+    if(currentLang === "ru"){
+      el.textContent = localeRuData[key];
+    } else if (currentLang === "kz"){
+      el.textContent = localeKzData[key];
+    } else {
+      // default ru
+      el.textContent = localeRuData[key];
+    }
+
+    
   })
 }
