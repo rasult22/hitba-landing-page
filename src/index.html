@@ -66,6 +66,13 @@
           Скачать приложение
         </a>  
       </li>
+
+      <li class="menu__item">
+        <select id="lang-mobile-select">
+          <option value="ru">Русский</option>
+          <option value="kz">Қазақша</option>
+        </select>
+      </li>
     </menu>
   </div>
   <div class="inform-alert d-none">
@@ -107,11 +114,14 @@
       </button>
     </div>
   </div>
+
+
   <div class="global-wrapper">
     <header class="page-header wrapper">
       <div class="page-header__left">
         <img class="logo" src="./assets/logo.svg" alt="Logo" title="Hitba.io">
       </div>
+      
       <div class="page-header__burger">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z" fill="white"/>
@@ -146,6 +156,12 @@
               Скачать приложение
             </a>  
           </li>
+          <li class="menu__item">
+            <select id="lang-select">
+              <option value="ru">Русский</option>
+              <option value="kz">Қазақша</option>
+            </select>
+          </li>
         </menu>
       </div>
     </header>
@@ -155,86 +171,88 @@
           <h1 class="first-section__title" data-locale-id="key_1">
             <!-- Найдите свою вторую половину по исламским ценностям c Hitba -->
           </h1>
-          <div class="first-section__title-text">
-            Отправьте свой номер, чтобы получить доступ к приложению
+          <div class="first-section__title-text" data-locale-id="key_2">
+            <!-- Отправьте свой номер, чтобы получить доступ к приложению -->
           </div>
           <form id="form-1" class="first-section__form form">
-            <input id="phone-input-1" type="tel" class="form-input" placeholder="Введите номер телефона"/>
-            <button class="form-btn">Отправить</button>
+            <input id="phone-input-1" type="tel" class="form-input" value="+7"/>
+            <button class="form-btn" data-locale-id="key_3">
+              <!-- Отправить -->
+            </button>
           </form>
         </div>
       </section>
       <section id="how-does-it-work" class="second-section wrapper">
-        <h1 class="second-section__title">
-          Как это работает?
+        <h1 class="second-section__title" data-locale-id="key_4">
+          <!-- Как это работает? -->
         </h1>
         <div class="features-block">
           <div class="features-block-item">
             <div class="features-block-item__icon">
               <img src="./assets/UserCircle.svg" alt="UserCircle Icon">
             </div>
-            <div class="features-block-item__title">
-              Зарегистрируйтесь
+            <div class="features-block-item__title" data-locale-id="key_5">
+              <!-- Зарегистрируйтесь -->
             </div>
-            <div class="features-block-item__desc">
-              Заполните анкету и укажите требования к вашей будущей второй половинке
+            <div class="features-block-item__desc" data-locale-id="key_6">
+              <!-- Заполните анкету и укажите требования к вашей будущей второй половинке -->
             </div>
           </div>
           <div class="features-block-item">
             <div class="features-block-item__icon">
               <img src="./assets/MagnifyingGlass.svg" alt="Glass Icon">
             </div>
-            <div class="features-block-item__title">
-              Просмотрите анкеты
+            <div class="features-block-item__title" data-locale-id="key_7">
+              <!-- Просмотрите анкеты -->
             </div>
-            <div class="features-block-item__desc">
-              Мы будем предлагать вам анкеты на основе ваших предпочтений и требований
+            <div class="features-block-item__desc" data-locale-id="key_8">
+              <!-- Мы будем предлагать вам анкеты на основе ваших предпочтений и требований -->
             </div>
           </div>
           <div class="features-block-item">
             <div class="features-block-item__icon">
               <img src="./assets/ChatsCircle.svg" alt="Chat Icon">
             </div>
-            <div class="features-block-item__title">
-              Начните знакомство
+            <div class="features-block-item__title" data-locale-id="key_9">
+              <!-- Начните знакомство -->
             </div>
-            <div class="features-block-item__desc">
-              Общайтесь в чате под присмотром уали, он будет предостерегать от запретного
+            <div class="features-block-item__desc" data-locale-id="key_10">
+              <!-- Общайтесь в чате под присмотром уали, он будет предостерегать от запретного -->
             </div>
           </div>
         </div>
       </section>
       <section id="advantages" class="third-section wrapper">
-        <div class="third-section__mini-title">
-          Почему именно мы?
+        <div class="third-section__mini-title" data-locale-id="key_11">
+          <!-- Почему именно мы? -->
         </div>
-        <div class="third-section__title">
-          Наши преимущества
+        <div class="third-section__title" data-locale-id="key_12">
+          <!-- Наши преимущества -->
         </div>
         <div class="advantages-block">
           <div class="advantages-block__left">
             <div class="advantages-item">
-              <div class="advantages-item__title">
-                Научим основам общения
+              <div class="advantages-item__title" data-locale-id="key_13">
+                <!-- Научим основам общения -->
               </div>
-              <div class="advantages-item__desc">
-                Читайте статьи и смотрите образовательные видео, и узнавайте, как общаться на свидании
-              </div>
-            </div>
-            <div class="advantages-item">
-              <div class="advantages-item__title">
-                Проверка анкет
-              </div>
-              <div class="advantages-item__desc">
-                Мы проверяем каждую анкету, чтобы исключить нарушения
+              <div class="advantages-item__desc" data-locale-id="key_14">
+                <!-- Читайте статьи и смотрите образовательные видео, и узнавайте, как общаться на свидании -->
               </div>
             </div>
             <div class="advantages-item">
-              <div class="advantages-item__title">
-                Контроль уали
+              <div class="advantages-item__title" data-locale-id="key_15">
+                <!-- Проверка анкет -->
               </div>
-              <div class="advantages-item__desc">
-                Уали будет наблюдать за вашим общением и будет предостерегать от запретного
+              <div class="advantages-item__desc" data-locale-id="key_16">
+                <!-- Мы проверяем каждую анкету, чтобы исключить нарушения -->
+              </div>
+            </div>
+            <div class="advantages-item">
+              <div class="advantages-item__title" data-locale-id="key_17">
+                <!-- Контроль уали -->
+              </div>
+              <div class="advantages-item__desc" data-locale-id="key_18">
+                <!-- Уали будет наблюдать за вашим общением и будет предостерегать от запретного -->
               </div>
             </div>
           </div>
@@ -604,9 +622,6 @@
       </div>
     </footer>
   </div>
-  <select id="lang-select">
-    <option value="ru">ru</option>
-    <option value="kz">kz</option>
-  </select>
+
 </body>
 </html>

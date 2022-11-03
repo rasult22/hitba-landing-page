@@ -52,6 +52,18 @@
   opacity: 0.7;
   transition: opacity 0.1s ease;
 }
+.menu__item #lang-select,
+.menu__item #lang-mobile-select
+{
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+.menu__item #lang-mobile-select{
+  color: #18181b;
+}
 /* 
  HEADER END
 */ 

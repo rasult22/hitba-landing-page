@@ -39,8 +39,13 @@ function initForms () {
   form2.addEventListener('submit', phoneSubmitHandler)
 
   const langSelectEl = document.querySelector("#lang-select");
+  const langMobileSelectEl = document.querySelector("#lang-mobile-select");
+
   langSelectEl.value = localStorage.getItem("lang") || "ru";
-  langSelectEl.addEventListener("change", setLocale)
+  langMobileSelectEl.value = localStorage.getItem("lang") || "ru";
+
+  langSelectEl.addEventListener("change", setLocale);
+  langMobileSelectEl.addEventListener("change", setLocale);
 }
 
 function downloadAppHandler () {
@@ -134,6 +139,7 @@ function mobileMenu () {
   close.addEventListener('click', closeFn)
 
   function closeFn (e) {
+    if(e.target.id === "lang-mobile-select") return
     menu.classList.remove('d-block')
   }
 }
@@ -179,7 +185,7 @@ function initLocale(){
     if(currentLang === "ru"){
       el.textContent = localeRuData[key];
     } else if (currentLang === "kz"){
-      el.textContent = localeKzData[key];
+      el.textContent = localeKzData[key] || localeRuData[key]; // if kz translation is not available
     } else {
       // default ru
       el.textContent = localeRuData[key];
