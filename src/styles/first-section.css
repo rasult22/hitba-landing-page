@@ -81,6 +81,16 @@
   background-color: rgba(29, 172, 138, .9);
   transition: background-color 0.1s ease;
 }
+.first-section__download-app__icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+.first-section__download-app__icons a img{
+  display: block;
+  width: 160px;
+}
 /* 
  FORM END
 */ 
