@@ -1,6 +1,6 @@
 require('./styles/main.css')
 import landingOrder from './js/form'
-import Swiper, {Navigation} from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 import 'swiper/css'
 import { applyPhoneMaskToInputElement } from './js/input-masking'
 
@@ -10,13 +10,13 @@ import localeRuData from "./locale/ru"
 
 window.addEventListener('load', (event) => {
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    window.document.addEventListener('touchmove', function(e) {
-      if(e.scale !== 1) {
+    window.document.addEventListener('touchmove', function (e) {
+      if (e.scale !== 1) {
         e.preventDefault();
       }
-    }, {passive: false});
+    }, { passive: false });
   }
- 
+
   initLocale()
   initForms()
   alertSettings()
@@ -26,18 +26,7 @@ window.addEventListener('load', (event) => {
   smoothScroll()
 });
 
-function initForms () {
-  var input1 = document.querySelector('#phone-input-1')
-  var input2 = document.querySelector('#phone-input-2')
-  applyPhoneMaskToInputElement(input1)
-  applyPhoneMaskToInputElement(input2)
-  
-  var form1 = document.querySelector('#form-1')
-  var form2 = document.querySelector('#form-2')
-
-  form1.addEventListener('submit', phoneSubmitHandler)
-  form2.addEventListener('submit', phoneSubmitHandler)
-
+function initForms() {
   const langSelectEl = document.querySelector("#lang-select");
   const langMobileSelectEl = document.querySelector("#lang-mobile-select");
 
@@ -48,7 +37,7 @@ function initForms () {
   langMobileSelectEl.addEventListener("change", setLocale);
 }
 
-function downloadAppHandler () {
+function downloadAppHandler() {
   var downloads = document.querySelectorAll('.download-app-icon')
 
   downloads.forEach(el => {
@@ -66,12 +55,12 @@ function downloadAppHandler () {
     })
 }
 
-function phoneSubmitHandler (e) {
+function phoneSubmitHandler(e) {
   e.preventDefault()
   var phoneNumber = this.querySelector('input').value
-  
-  if(phoneNumber) {
-    landingOrder(phoneNumber).then(function() {
+
+  if (phoneNumber) {
+    landingOrder(phoneNumber).then(function () {
       toggleAlert()
     }).catch(e => {
       console.error(e)
@@ -79,10 +68,10 @@ function phoneSubmitHandler (e) {
   }
 }
 
-function toggleDownloadAlert () {
+function toggleDownloadAlert() {
   document.querySelector('.inform-alert').classList.toggle('d-none')
 }
-function toggleAlert () {
+function toggleAlert() {
   document.querySelector('.success-alert').classList.toggle('d-none')
 }
 function alertSettings() {
@@ -97,7 +86,7 @@ function alertSettings() {
     })
 }
 
-function initSwiper () {
+function initSwiper() {
   var slidesPerView = 5
   var spaceBetween = 10
   if (window.innerWidth < 700) {
@@ -116,7 +105,7 @@ function initSwiper () {
   return swiper
 }
 
-function mobileMenu () {
+function mobileMenu() {
   var menu = document.querySelector('.mobile-menu')
   var burger = document.querySelector('.page-header__burger')
   var close = document.querySelector('.mobile-menu__header .close')
@@ -126,20 +115,20 @@ function mobileMenu () {
   })
 
   window.addEventListener('scroll', async function (e) {
-    if(window.scrollY > 612) {
+    if (window.scrollY > 612) {
       document.querySelector('.page-header').classList.add('page-header--background')
     } else {
       document.querySelector('.page-header').classList.remove('page-header--background')
     }
   })
-  
+
   link.forEach(function (x) {
     x.addEventListener('click', closeFn)
   })
   close.addEventListener('click', closeFn)
 
-  function closeFn (e) {
-    if(e.target.id === "lang-mobile-select") return
+  function closeFn(e) {
+    if (e.target.id === "lang-mobile-select") return
     menu.classList.remove('d-block')
   }
 }
@@ -148,14 +137,14 @@ function clickHandler(e) {
   e.preventDefault();
   const href = this.getAttribute("href");
   const offsetTop = document.querySelector(href).offsetTop;
- 
+
   scroll({
     top: offsetTop,
     behavior: "smooth"
   });
 }
 
-function smoothScroll () {
+function smoothScroll() {
   var links = document.querySelectorAll('.menu__item a')
   var links2 = document.querySelectorAll('.footer-list__item a')
 
@@ -168,29 +157,29 @@ function smoothScroll () {
 }
 
 
-function setLocale(e){
+function setLocale(e) {
   localStorage.setItem("lang", e.target.value)
 
   initLocale();
 }
 
-function initLocale(){
+function initLocale() {
   const elements = document.querySelectorAll("[data-locale-id]");
   const currentLang = localStorage.getItem("lang") || "ru";
 
   elements.forEach(el => {
-    if(!el?.dataset?.localeId) return;
+    if (!el?.dataset?.localeId) return;
     const key = el.dataset.localeId;
 
-    if(currentLang === "ru"){
+    if (currentLang === "ru") {
       el.textContent = localeRuData[key];
-    } else if (currentLang === "kz"){
+    } else if (currentLang === "kz") {
       el.textContent = localeKzData[key] || localeRuData[key]; // if kz translation is not available
     } else {
       // default ru
       el.textContent = localeRuData[key];
     }
 
-    
+
   })
 }
