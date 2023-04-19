@@ -1,53 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
 .global-wrapper {
   position: relative;
 }
+
 h1 {
   margin: 0;
 }
+
 .mobile-menu {
   display: none;
 }
+
 .wrapper {
   max-width: 1184px;
   margin: 0 auto;
 }
+
 .link {
   text-decoration: none;
   color: inherit;
 }
+
 body {
   color: #101828;
 }
+
 .d-none {
   display: none;
 }
+
 .d-block {
   display: block;
   transition: opacity .3s ease;
   opacity: 1;
 }
+
 .mt-1 {
   margin-top: 4px;
 }
+
 .mt-2 {
   margin-top: 8px;
 }
+
 .mt-3 {
   margin-top: 16px;
 }
+
 .mt-4 {
   margin-top: 24px;
 }
+
 .pointer {
   cursor: pointer;
 }
+
 .text-intent {
   text-indent: 25px;
 }
+
+.text-save-wrap {
+  white-space: pre-wrap;
+}
+
 * {
   box-sizing: border-box;
 }
+
 img {
   webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -55,6 +75,7 @@ img {
   -o-user-drag: none;
   user-drag: none;
 }
+
 @import '~normalize.css';
 @import './articles.css';
 @import './download-app.css';

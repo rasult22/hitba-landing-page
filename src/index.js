@@ -6,7 +6,7 @@ import { applyPhoneMaskToInputElement } from './js/input-masking'
 
 import localeKzData from "./locale/kz"
 import localeRuData from "./locale/ru"
-
+import localeEnData from "./locale/en"
 
 window.addEventListener('load', (event) => {
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
@@ -175,7 +175,10 @@ function initLocale() {
       el.textContent = localeRuData[key];
     } else if (currentLang === "kz") {
       el.textContent = localeKzData[key] || localeRuData[key]; // if kz translation is not available
-    } else {
+    } else if (currentLang === "en") {
+      el.textContent = localeEnData[key] || localeKzData[key] || localeRuData[key]; // if en translation is not available
+    }
+    else {
       // default ru
       el.textContent = localeRuData[key];
     }
