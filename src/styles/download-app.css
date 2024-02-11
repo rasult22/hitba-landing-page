@@ -1,6 +1,6 @@
 .download-app {
-  padding-top: 120px;
   display: flex;
+  padding: 120px 16px 0px 16px;
 }
 .download-app__left{
   width: 50%;
