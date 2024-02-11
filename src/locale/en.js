@@ -18,11 +18,10 @@ export default {
     key_20: "Who is observer?",
     key_21: `“Let none of you seclude yourself with a (stranger) woman, for the shaitan (at the same time) is the third of them” (Tirmidhi 2165.)
 
-
-    The most worthy people for the role of the Observer (a Muslim over 18 years old, a sane person who can take responsibility for the fate of a girl):
-    - Girls Vali (father, responsible man) a special guardian of the bride in Islamic family law, her representative at the conclusion of the marriage contract.;
-    - close relative;
-    - caring person (prudent and hopeful woman);
+The most worthy people for the role of the Observer (a Muslim over 18 years old, a sane person who can take responsibility for the fate of a girl):
+- Girls Vali (father, responsible man) a special guardian of the bride in Islamic family law, her representative at the conclusion of the marriage contract.;
+- close relative;
+- caring person (prudent and hopeful woman);
     `,
     key_23: "Who sees my photos?",
     key_24: "Your photos are visible only to those users whom you approved to meet and with whom you communicate on the site. All other users see blurry photos if you set the blur effect",
