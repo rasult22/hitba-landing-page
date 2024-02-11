@@ -70,6 +70,17 @@
 
 }
 
+@media(max-width: 768px){
+  .advantages-block__left{
+    padding-top: 0;
+    width: 60%;
+  }
+
+  .advantages-block__right{
+    width: 40%;
+  }
+}
+
 @media (max-width: 600px) {
 
   .success-alert__content {

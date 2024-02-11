@@ -13,6 +13,9 @@
 .articles__wrapper{
   padding-top: 64px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:20px;
   padding-bottom: 16px;
 }
 

@@ -2,7 +2,6 @@
  HEADER START
 */
 .page-header {
-  padding-top: 48px;
   max-width: 1184px;
   width: 100%;
   left: 50%;
@@ -17,6 +16,8 @@
   line-height: 19px;
   letter-spacing: 0em;
   text-align: center;
+  padding: 0 16px;
+  padding-top: 48px;
 }
 
 .page-header__burger {
